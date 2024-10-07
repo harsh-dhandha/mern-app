@@ -36,7 +36,7 @@ jobs:
         uses: appleboy/ssh-action@v0.1.2
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: your-server-username
+          username: harsh
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /path/to/your/app
