@@ -1,14 +1,21 @@
+name: CI Pipeline  # This is optional, can be left out
+
+on:
+  push:
+    branches:
+      - main  # Triggers the workflow on push to the main branch
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout code
-       uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-     - name: Set up Node.js
-       uses: actions/setup-node@v2
-       with:
-         node-version: '14'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
 
       - name: Install backend dependencies
         run: npm install
